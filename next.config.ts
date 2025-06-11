@@ -24,6 +24,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: false, // Disabled to prevent double-rendering in development
+  distDir: '.next',
+  // For production deployments
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   images: {
     // domains: ['localhost'],
     remotePatterns: [
