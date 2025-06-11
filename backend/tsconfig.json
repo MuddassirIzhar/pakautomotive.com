@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "verbatimModuleSyntax": true,
-    "isolatedModules": false,
     "experimentalDecorators": true,
     "target": "es2016", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "emitDecoratorMetadata": true, /* Emit design-type metadata for decorated declarations in source files. */
