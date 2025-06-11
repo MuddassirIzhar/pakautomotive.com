@@ -3,24 +3,31 @@ module.exports = {
     {
       name: "pakautomotive-backend",
       script: "src/index.ts",
-      interpreter: "./node_modules/.bin/ts-node",
+      cwd: "/var/www/pakautomotive.com/backend",
+      interpreter: "node",
+      interpreter_args: "--loader ts-node/esm", // if using ESM
       instances: 1,
       max_memory_restart: "300M",
-      watch: true,
-      log_date_format: "DD-MM HH:mm:ss",
-      out_file: "./out.log",
-      error_file: "./error.log",
+
+      // Logs
+      out_file: "./logs/out.log",
+      error_file: "./logs/error.log",
       merge_logs: true,
-      env_development: {
+      log_date_format: "DD-MM HH:mm:ss Z",
+
+      // Environment configs
+      env: {
         NODE_ENV: "development",
-        PORT: 8080
+        PORT: 3001,
+        TS_NODE_PROJECT: "./tsconfig.json",
       },
       env_production: {
         NODE_ENV: "production",
-        PORT: 8080,
-        script: "build/index.js", // compiled JS
-        interpreter: "node"
-      }
-    }
-  ]
+        PORT: 3001,
+        // In production, PM2 should run the compiled JS
+        script: "build/index.js",
+        interpreter: "node",
+      },
+    },
+  ],
 };
