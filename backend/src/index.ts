@@ -246,25 +246,25 @@ io.on("connection", (socket) => {
 
 
 // import routes from router
-app.use('/', preseedRoutes);
-app.use('/', userRoutes);
-app.use('/', serviceRoutes);
-app.use('/', categoryRoutes);
-app.use('/', subCategoryRoutes);
-app.use('/', brandRoutes);
-app.use('/', blogRoutes);
-app.use('/', modelRoutes);
-app.use('/', variantRoutes);
-app.use('/', orderRoutes);
-app.use('/', permissionRoutes);
-app.use('/', productRoutes);
-app.use('/', roleRoutes);
-app.use('/', roomRoutes);
-app.use('/', messageRoutes);
-app.use('/', reminderRoutes);
-app.use('/', patientRoutes);
-app.use('/', featureAndSpecificationRoutes);
-app.use('/', globalRoutes);
+app.use('/backend', preseedRoutes);
+app.use('/backend', userRoutes);
+app.use('/backend', serviceRoutes);
+app.use('/backend', categoryRoutes);
+app.use('/backend', subCategoryRoutes);
+app.use('/backend', brandRoutes);
+app.use('/backend', blogRoutes);
+app.use('/backend', modelRoutes);
+app.use('/backend', variantRoutes);
+app.use('/backend', orderRoutes);
+app.use('/backend', permissionRoutes);
+app.use('/backend', productRoutes);
+app.use('/backend', roleRoutes);
+app.use('/backend', roomRoutes);
+app.use('/backend', messageRoutes);
+app.use('/backend', reminderRoutes);
+app.use('/backend', patientRoutes);
+app.use('/backend', featureAndSpecificationRoutes);
+app.use('/backend', globalRoutes);
 app.use('/public/',express.static(path.join(__dirname, '/../public')));
 app.use('/uploads/video/',express.static(path.join(__dirname, '/../uploads/video')));
 app.use('/uploads/photo/',express.static(path.join(__dirname, '/../uploads/photo')));
