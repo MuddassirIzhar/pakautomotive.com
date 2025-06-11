@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "PakAutomotive Backend",
+      name: "pakautomotive-backend",
       script: "src/index.ts",
       cwd: "/var/www/pakautomotive.com/backend",
       interpreter: "node",
