@@ -44,7 +44,7 @@ const theme = {
 
 const onChange = (editorState: EditorState) => {
   editorState.read(() => {
-    console.log("Editor State:", JSON.stringify(editorState.toJSON()));
+    // console.log("Editor State:", JSON.stringify(editorState.toJSON()));
   });
 };
 
@@ -88,11 +88,11 @@ export const TextEditor = () => {
         <LinkPlugin />
         <MarkdownShortcutPlugin />
         <OnChangePlugin onChange={onChange} />
-        {/* <OnChangePlugin onChange={(editorState) => console.log(editorState.toJSON())} /> */}
+        {/* <OnChangePlugin onChange={(editorState) => // console.log(editorState.toJSON())} /> */}
         <CheckListPlugin />
         <TablePlugin />
         <CodeHighlightPlugin />
-        <OnChangePlugin onChange={(editorState) => console.log(editorState.toJSON())} />
+        <OnChangePlugin onChange={(editorState) => // console.log(editorState.toJSON())} />
         <HorizontalRulePlugin />
       </div>
     </LexicalComposer>

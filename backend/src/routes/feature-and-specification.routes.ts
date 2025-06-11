@@ -4,6 +4,7 @@ import { CheckAuthState } from "../middleware/auth.middleware";
 
 const router = Router();
 
-router.get('/feature-and-specifications', CheckAuthState, FeatureAndSpecifications)
+// router.get('/feature-and-specifications', CheckAuthState, FeatureAndSpecifications)
+router.get('/feature-and-specifications', FeatureAndSpecifications)
 
 export default router;

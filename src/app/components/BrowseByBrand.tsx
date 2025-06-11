@@ -28,7 +28,7 @@ export function BrowseByBrand() {
     } catch (error) {
       setIsLoading(false);
       console.error("Error fetching brands:", error);
-      alert("Error fetching the brands. Please try again.");
+      // alert"Error fetching the brands. Please try again.");
     }
   };
   useEffect(() => {

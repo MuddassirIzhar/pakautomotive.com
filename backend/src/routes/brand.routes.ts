@@ -9,9 +9,10 @@ const upload = multer({ storage: multer.memoryStorage() });
 const router = Router();
 // brand administration - get all brands
 // router.get('/brands', CheckAuthState, CheckPermissions('brands'), GetBrands)
-router.get('/brands', CheckAuthState, GetBrands)
+router.get('/brands', GetBrands)
 // brand administration - get brand by IDENTIFIER
-router.get('/brands/:identifier', CheckAuthState, GetBrand)
+// router.get('/brands/:identifier', CheckAuthState, GetBrand)
+router.get('/brands/:identifier', GetBrand)
 // brand administration - create new brand
 router.put('/brands/:id', upload.array("images[]"), CheckAuthState, UpdateBrand)
 // brand administration - create new brand

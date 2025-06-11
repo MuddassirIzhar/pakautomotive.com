@@ -70,7 +70,7 @@ export default function Index() {
       // const rest = await axiosAuth.get(ALL_BLOGS);
       const res = await axiosAuth.get(GET_VARIANT(variantSlug));
       if (res.data) {
-        console.log(res.data.variant);
+        // console.log(res.data.variant);
         setVariant(res.data.variant);
       } else {
         return notFound();
@@ -111,13 +111,13 @@ export default function Index() {
       const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
       const url = new URL(`${BASE_URL}/${ALL_FEATURE_AND_SPECIFICATIONS}`);
       const res = await axiosAuth.get(url.toString());
-      console.log(res.data.data);
+      // console.log(res.data.data);
       setFeatureAndSpecifications(res.data.data);
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       console.error("Error fetching brands:", error);
-      alert("Error fetching the brands. Please try again.");
+      // alert"Error fetching the brands. Please try again.");
     }
   };
   useEffect(() => {

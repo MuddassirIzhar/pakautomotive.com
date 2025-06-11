@@ -11,7 +11,8 @@ const router = Router();
 // router.get('/variants', CheckAuthState, CheckPermissions('variants'), GetVariants)
 router.get('/variants', CheckAuthState, GetVariants)
 // model administration - get brand by IDENTIFIER
-router.get('/variants/:identifier', CheckAuthState, GetVariant)
+// router.get('/variants/:identifier', CheckAuthState, GetVariant)
+router.get('/variants/:identifier', GetVariant)
 // variant administration - create new variant
 router.put('/variants/:id', upload.array("images[]"), CheckAuthState, UpdateVariant)
 // variant administration - create new variant

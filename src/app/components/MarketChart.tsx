@@ -33,10 +33,10 @@ const MarketChart = (props : LineProps) => {
           `https://api.coingecko.com/api/v3/coins/${props.id}/market_chart?vs_currency=usd&days=30&precision=2&interval=daily`
         );
         const data = await response.json();
-        console.log("chartData:", data);
+        // console.log("chartData:", data);
         setChartData(data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
     fetchData();

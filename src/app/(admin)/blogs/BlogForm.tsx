@@ -226,7 +226,7 @@ const BlogForm = () => {
         getAllModels();
     }, []);
     useEffect(() => {
-        console.log(blogErrors)
+        // console.log(blogErrors)
     }, [blogErrors]);
 
     // Function to generate a slug from the title
@@ -273,7 +273,7 @@ const BlogForm = () => {
     const getBlogData = async () => {
         const res = await axiosAuth.get(GET_BLOG(id));
         if (res.data) {
-            console.log(res.data.blog)
+            // console.log(res.data.blog)
             blogFormReset(res.data.blog);
         } else {
             router.push('/blogs')

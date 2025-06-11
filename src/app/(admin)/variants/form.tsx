@@ -163,7 +163,7 @@ const Form = ({ brands, allFeatureAndSpecifications, variant, submissionCallback
     });
     const onSubmitVariant = async (data: FormEvent<HTMLFormElement> | any, e: any) => {
         setIsLoading(true);
-        console.log(data)
+        // console.log(data)
         try {
             if (variant) {
                 const res = await axiosInstance.put(UPDATE_VARIANT(variant.id), data, {headers: {'Content-Type': 'multipart/form-data'}});
@@ -297,10 +297,10 @@ const Form = ({ brands, allFeatureAndSpecifications, variant, submissionCallback
                     value: existing ? existing.value : spec.field === "boolean" ? false : ""
                 };
             });
-            // console.log(initializedFeatures)
+            // // console.log(initializedFeatures)
             setVariant("featureAndSpecifications", initializedFeatures);
         } else {
-            console.log('create',allFeatureAndSpecifications[0])
+            // console.log('create',allFeatureAndSpecifications[0])
             // variantFormReset();
             // setVariant('featureAndSpecifications', initializeVariantFeatures(allFeatureAndSpecifications));
             variantFormReset(variantOptions.defaultValues);
@@ -342,10 +342,10 @@ const Form = ({ brands, allFeatureAndSpecifications, variant, submissionCallback
     }
 
     useEffect(() => {
-        console.log(variantErrors)
+        // console.log(variantErrors)
     }, [variantErrors]);
     useEffect(() => {
-        console.log(featureAndSpecificationsFields)
+        // console.log(featureAndSpecificationsFields)
     }, [featureAndSpecificationsFields]);
     return (
 

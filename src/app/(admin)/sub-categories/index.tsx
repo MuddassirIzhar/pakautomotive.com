@@ -62,7 +62,7 @@ export default function Index() {
         } catch (error) {
             setIsCategoryLoading(false)
             console.error("Error fetching categories:", error);
-            alert("Error fetching the categories. Please try again.");
+            // alert"Error fetching the categories. Please try again.");
         }
     };
     const getAllSubCategories = async () => {
@@ -85,7 +85,7 @@ export default function Index() {
         } catch (error) {
             setIsLoading(false)
             console.error("Error fetching subCategories:", error);
-            alert("Error fetching the subCategories. Please try again.");
+            // alert"Error fetching the subCategories. Please try again.");
         }
     };
     const onSubCategoryPageChange = (page: number) => {
@@ -108,11 +108,11 @@ export default function Index() {
             }
 
             getAllSubCategories();
-            alert(`Item with ID ${id} deleted successfully!`);
+            // alert`Item with ID ${id} deleted successfully!`);
             return response.json();
         } catch (error) {
             console.error("Error deleting item:", error);
-            alert("Error deleting the item. Please try again.");
+            // alert"Error deleting the item. Please try again.");
         }
     };
 

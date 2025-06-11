@@ -28,7 +28,7 @@ export function BrowseByType() {
     } catch (error) {
       setIsLoading(false);
       console.error("Error fetching subCategories:", error);
-      alert("Error fetching the subCategories. Please try again.");
+      // alert"Error fetching the subCategories. Please try again.");
     }
   };
   useEffect(() => {

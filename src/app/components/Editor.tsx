@@ -56,7 +56,7 @@ export default function Editor({ submissionCallback }: { submissionCallback: () 
           });
         },
         onChange: (api, event) => {
-          console.log('Now I know that Editor\'s content changed!', event)
+          // console.log('Now I know that Editor\'s content changed!', event)
           submissionCallback();
         }
       });

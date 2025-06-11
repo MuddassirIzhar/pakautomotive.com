@@ -56,7 +56,7 @@ export default function Index() {
 			// const rest = await axiosAuth.get(ALL_BLOGS);
 			const res = await axiosAuth.get(GET_MODEL(modelSlug));
 			if (res.data) {
-				console.log(res.data.model);
+				// console.log(res.data.model);
 				setModel(res.data.model);
 			} else {
 				return notFound();

@@ -134,7 +134,7 @@ export default function ContextMenuPlugin(): JSX.Element {
               name: 'clipboard-read',
             });
             if (permission.state === 'denied') {
-              alert('Not allowed to paste from clipboard.');
+              // alert'Not allowed to paste from clipboard.');
               return;
             }
 
@@ -160,7 +160,7 @@ export default function ContextMenuPlugin(): JSX.Element {
             });
 
             if (permission.state === 'denied') {
-              alert('Not allowed to paste from clipboard.');
+              // alert'Not allowed to paste from clipboard.');
               return;
             }
 

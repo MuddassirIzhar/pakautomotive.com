@@ -7,7 +7,8 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 
 const router = Router();
-router.get('/sub-categories', CheckAuthState, GetSubCategories)
+// router.get('/sub-categories', CheckAuthState, GetSubCategories)
+router.get('/sub-categories', GetSubCategories)
 // categorie - get categorie by ID
 router.get('/sub-categories/:id', CheckAuthState, GetSubCategory)
 // categorie - create new categorie

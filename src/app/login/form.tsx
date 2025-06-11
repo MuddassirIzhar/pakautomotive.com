@@ -69,7 +69,7 @@ export default function Form() {
 			e.target.reset();
 			setIsLoading(false);
 		} catch (error: any) {
-			console.log(error);
+			// console.log(error);
 			if (axios.isAxiosError(error)) {
 				if (error.response?.data?.length > 0) {
 					error.response?.data.map((message: any, i: number) => {

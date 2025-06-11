@@ -68,7 +68,7 @@ export default function Index() {
         } catch (error) {
             setIsLoading(false)
             console.error("Error fetching types:", error);
-            alert("Error fetching the types. Please try again.");
+            // alert"Error fetching the types. Please try again.");
         }
     };
     const onTypePageChange = (page: number) => {
@@ -91,11 +91,11 @@ export default function Index() {
             }
 
             getAllTypes();
-            alert(`Item with ID ${id} deleted successfully!`);
+            // alert`Item with ID ${id} deleted successfully!`);
             return response.json();
         } catch (error) {
             console.error("Error deleting item:", error);
-            alert("Error deleting the item. Please try again.");
+            // alert"Error deleting the item. Please try again.");
         }
     };
 

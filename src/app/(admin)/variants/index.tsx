@@ -64,7 +64,7 @@ export default function Index() {
         } catch (error) {
             setIsCategoryLoading(false)
             console.error("Error fetching brands:", error);
-            alert("Error fetching the brands. Please try again.");
+            // alert"Error fetching the brands. Please try again.");
         }
     };
     const getAllFeatureAndSpecifications = async () => {
@@ -73,13 +73,13 @@ export default function Index() {
             const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
             const url = new URL(`${BASE_URL}/${ALL_FEATURE_AND_SPECIFICATIONS}`);
             const res = await axiosAuth.get(url.toString());
-            console.log(res.data.data)
+            // console.log(res.data.data)
             setFeatureAndSpecifications(res.data.data)
             setIsCategoryLoading(false)
         } catch (error) {
             setIsCategoryLoading(false)
             console.error("Error fetching brands:", error);
-            alert("Error fetching the brands. Please try again.");
+            // alert"Error fetching the brands. Please try again.");
         }
     };
     const getAllVariants = async () => {
@@ -101,7 +101,7 @@ export default function Index() {
         } catch (error) {
             setIsLoading(false)
             console.error("Error fetching variants:", error);
-            alert("Error fetching the variants. Please try again.");
+            // alert"Error fetching the variants. Please try again.");
         }
     };
     const onVariantPageChange = (page: number) => {

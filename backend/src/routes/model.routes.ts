@@ -11,7 +11,8 @@ const router = Router();
 // router.get('/models', CheckAuthState, CheckPermissions('models'), GetModels)
 router.get('/models', CheckAuthState, GetModels)
 // model administration - get brand by IDENTIFIER
-router.get('/models/:identifier', CheckAuthState, GetModel)
+// router.get('/models/:identifier', CheckAuthState, GetModel)
+router.get('/models/:identifier', GetModel)
 // model administration - create new model
 router.put('/models/:id', upload.array("images[]"), CheckAuthState, UpdateModel)
 // model administration - create new model

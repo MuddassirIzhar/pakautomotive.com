@@ -1,24 +1,34 @@
 import { withAuth } from "next-auth/middleware"
 
-// middleware is applied to all routes, use conditionals to select
-
 export default withAuth(
-  function middleware (req) {
+  function middleware(req) {
+    // You can add custom logic here if needed
   },
   {
     callbacks: {
       authorized: ({ req, token }) => {
-        if(req.nextUrl.pathname != '/login' && req.nextUrl.pathname != '/register'){
-            if (
-              req.nextUrl.pathname.startsWith('/') &&
-              token === null
-            ) {
-              return false
-            }
-            return true
-        }
-        return true
+        const { pathname } = req.nextUrl;
+
+        // Publicly accessible routes
+        const publicPaths = [
+          '/',
+          '/login',
+          '/register'
+        ];
+
+        const publicPrefixes = [
+          '/new-cars'
+        ];
+
+        const isPublic = publicPaths.includes(pathname) ||
+          publicPrefixes.some(prefix => pathname.startsWith(prefix));
+
+        // Allow public routes even if not authenticated
+        if (isPublic) return true;
+
+        // Block all other routes if not authenticated
+        return !!token;
       }
     }
   }
-)
+);

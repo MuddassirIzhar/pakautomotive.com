@@ -53,13 +53,13 @@ export function Banner() {
       const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
       const url = new URL(`${BASE_URL}/${ALL_BRAND_MODEL_AND_VARIANTS}`);
       const res = await axiosAuth.get(url.toString());
-      console.log(res.data.data);
+      // console.log(res.data.data);
       setBrands(res.data.data);
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       console.error("Error fetching brands:", error);
-      alert("Error fetching the brands. Please try again.");
+      // alert"Error fetching the brands. Please try again.");
     }
   };
   useEffect(() => {
