@@ -4,7 +4,7 @@ import { Role } from "../entities/role.entity";
 import multer from 'multer';
 import { extname } from 'path';
 const repository = Manager.getRepository(Role);
-
+const apiUrl = process.env.API_URL;
 export const Roles = async (req: Request, res: Response) => {
     // pagination
     // only retrieve 15 items per page
@@ -98,6 +98,6 @@ export const FileUpload = async (req: Request, res: Response)  => {
             return res.send(400).send(err)
         }
 
-        res.send({url: `http://localhost:8080/api/uploads/${req?.file?.filename}`})
+        res.send({url: `${apiUrl}/backend/uploads/${req?.file?.filename}`})
     })
 }

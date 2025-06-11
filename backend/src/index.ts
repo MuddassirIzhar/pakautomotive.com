@@ -60,7 +60,7 @@ myDataSource
         console.error("Error during Data Source initialization:", err)
     })
 const apiUrl = process.env.API_URL;
-const expressPort = process.env.WEB_PORT || 8080;
+const expressPort = process.env.WEB_PORT || 3001;
 const app = express();
 // Set up storage engine
 const storage = multer.diskStorage({
