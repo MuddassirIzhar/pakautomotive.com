@@ -3,7 +3,6 @@ import 'reflect-metadata';
 import { DataSource } from "typeorm"
 import path from 'path';
 const isCompiled = path.extname(__filename) === ".js";
-console.log("Using entity files:", path.join(__dirname, `./entities/*.entity.${isCompiled ? "js" : "ts"}`));
 
 export const myDataSource = new DataSource(
     {
@@ -21,7 +20,8 @@ export const myDataSource = new DataSource(
         //       ? path.join(__dirname, '/../**/*.entity.js')
         //       : path.join(__dirname, '/../**/*.entity.ts'),
         //   ],
-        entities: [path.join(__dirname, `./entities/*.entity.${isCompiled ? "js" : "ts"}`)],
+        // entities: [path.join(__dirname, `./entities/*.entity.${isCompiled ? "js" : "ts"}`)],
+        entities: [path.join(__dirname, `${isCompiled ? "./entities/*.entity.js" : "/../**/*.entity.{js,ts}"}`)],
 
         logging: false,
         synchronize: true,

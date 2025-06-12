@@ -368,7 +368,7 @@ export default function Index() {
 														</ul>
 													</div>
 													<Image 
-														src={`${imageUrl}/${model.images?.[0] ?? "public/car-placeholder.png"}`} 
+														src={`${imageUrl}/${model.images?.[0] ?? "uploads/photo/company-placeholder.png"}`} 
 														className="w-full rounded-t-xl" 
 														width={300} // Default width
 														height={300} // Default height

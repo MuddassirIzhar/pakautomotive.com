@@ -115,7 +115,7 @@ export const CreateBrand = async (req: Request, res: Response) => {
     const brand = await repository.save({
         name,
         slug,
-        logo: uploadPaths ? uploadPaths[0] : 'public/company-placeholder.png',
+        logo: uploadPaths ? uploadPaths[0] : 'uploads/photo/company-placeholder.png',
         ...body,
         categories: categories.map( (category_id : any) => {
             return {
@@ -180,7 +180,7 @@ export const UpdateBrand = async (req: Request, res: Response) => {
     }
     brand.name = name;
     brand.slug = slug;
-    brand.logo = uploadPaths ? uploadPaths[0] : "public/company-placeholder.png";
+    brand.logo = uploadPaths ? uploadPaths[0] : "uploads/photo/company-placeholder.png";
     Object.assign(brand, body);
 
     // Update categories (assuming `categories` is an array of IDs)

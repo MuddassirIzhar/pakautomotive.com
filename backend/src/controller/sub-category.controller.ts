@@ -98,7 +98,7 @@ export const CreateSubCategory = async (req: Request, res: Response) => {
     const { password, ...subCategory} = await repository.save({
         name,
         slug,
-        logo: uploadPaths ? uploadPaths[0] : 'public/company-placeholder.png',
+        logo: uploadPaths ? uploadPaths[0] : 'uploads/photo/company-placeholder.png',
         ...body,
         category: {
             id: category
@@ -149,7 +149,7 @@ export const UpdateSubCategory = async (req: Request, res: Response) => {
     const update = await repository.update(req.params.id, {
         name,
         slug,
-        logo: uploadPaths ? uploadPaths[0] : 'public/company-placeholder.png',
+        logo: uploadPaths ? uploadPaths[0] : 'uploads/photo/company-placeholder.png',
         ...body,
         category: {
             id: category
