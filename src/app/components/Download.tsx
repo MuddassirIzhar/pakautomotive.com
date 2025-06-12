@@ -55,7 +55,7 @@ export function Download() {
                 src={LoginImg}
                 width={200}
                 height={60}
-                unoptimized
+                // unoptimized
                 alt="Google Play Store"
                 className="relative z-10 drop-shadow-image shadow-xl"
               />
@@ -65,7 +65,7 @@ export function Download() {
                 src={ForgotImg}
                 width={200}
                 height={60}
-                unoptimized
+                // unoptimized
                 alt="Google Play Store"
                 className="relative z-0 drop-shadow-image shadow-xl"
               />

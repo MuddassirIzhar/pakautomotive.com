@@ -66,7 +66,7 @@ const Carousel: React.FC<PropType> = (props) => {
                             src={`${imageUrl}/${value.logo}`}
                             width={100}
                             height={100}
-                            unoptimized
+                            // unoptimized
                             alt={value.name}
                             className="object-contain"
                           />

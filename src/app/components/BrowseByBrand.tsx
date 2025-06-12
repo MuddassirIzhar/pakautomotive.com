@@ -61,7 +61,7 @@ export function BrowseByBrand() {
                             src={`${imageUrl}/${brand.logo}`}
                             width={100}
                             height={100}
-                            unoptimized
+                            // unoptimized
                             alt={brand.name}
                             className="object-contain"
                           />

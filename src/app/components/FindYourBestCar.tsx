@@ -18,7 +18,7 @@ export function FindYourBestCar() {
                   src={CarImg}
                   width={400}
                   height={400}
-                  unoptimized
+                  // unoptimized
                   alt="Car Image"
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 />

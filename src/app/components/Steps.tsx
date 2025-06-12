@@ -26,7 +26,7 @@ export function Steps() {
               src={SearchImg}
               width={200}
               height={200}
-              unoptimized
+              // unoptimized
               alt="Search Image"
               className="mx-auto mb-4 object-contain h-60"
             />
@@ -45,7 +45,7 @@ export function Steps() {
               src={CommunincateImg}
               width={200}
               height={200}
-              unoptimized
+              // unoptimized
               alt="Communication Image"
               className="mx-auto mb-4 object-contain h-60"
             />
@@ -64,7 +64,7 @@ export function Steps() {
               src={LocationImg}
               width={200}
               height={200}
-              unoptimized
+              // unoptimized
               alt="Location Image"
               className="mx-auto mb-4 object-contain h-60"
             />
