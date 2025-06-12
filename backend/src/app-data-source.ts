@@ -14,14 +14,14 @@ export const myDataSource = new DataSource(
         password: process.env.DS_PASS,
         database: process.env.DS_DB,
         // entities: [process.env.DS_ENTITIES || './src/entities/*.{js,ts}'],
-        entities: [__dirname + './entities/*.entity.{js,ts}'],
+        // entities: [__dirname + './entities/*.entity.{js,ts}'],
         // entities: [__dirname + '/../**/*.entity.{js,ts}'],
         // entities: [
         //     process.env.NODE_ENV === 'production'
         //       ? path.join(__dirname, '/../**/*.entity.js')
         //       : path.join(__dirname, '/../**/*.entity.ts'),
         //   ],
-        // entities: [path.join(__dirname, `./entities/*.entity.${isCompiled ? "js" : "ts"}`)],
+        entities: [path.join(__dirname, `./entities/*.entity.${isCompiled ? "js" : "ts"}`)],
 
         logging: false,
         synchronize: true,
