@@ -2,6 +2,8 @@ import 'dotenv/config';
 import 'reflect-metadata';
 import { DataSource } from "typeorm"
 import path from 'path';
+const isCompiled = path.extname(__filename) === ".js";
+console.log("Using entity files:", path.join(__dirname, `./entities/*.entity.${isCompiled ? "js" : "ts"}`));
 
 export const myDataSource = new DataSource(
     {
@@ -12,14 +14,15 @@ export const myDataSource = new DataSource(
         password: process.env.DS_PASS,
         database: process.env.DS_DB,
         // entities: [process.env.DS_ENTITIES || './src/entities/*.{js,ts}'],
+        entities: [__dirname + './entities/*.entity.{js,ts}'],
         // entities: [__dirname + '/../**/*.entity.{js,ts}'],
-        // entities: [__dirname + '/../**/*.entity.{js,ts}'],
-        entities: [
-            process.env.NODE_ENV === 'production'
-              ? path.join(__dirname, '/../**/*.entity.js')
-              : path.join(__dirname, '/../**/*.entity.ts'),
-          ],
-          
+        // entities: [
+        //     process.env.NODE_ENV === 'production'
+        //       ? path.join(__dirname, '/../**/*.entity.js')
+        //       : path.join(__dirname, '/../**/*.entity.ts'),
+        //   ],
+        // entities: [path.join(__dirname, `./entities/*.entity.${isCompiled ? "js" : "ts"}`)],
+
         logging: false,
         synchronize: true,
         multipleStatements: true
